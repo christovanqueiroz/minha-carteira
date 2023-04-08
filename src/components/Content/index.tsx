@@ -1,11 +1,15 @@
 import React from 'react';
 
+type Props = {
+    children?: React.ReactNode
+};
+
 import { Container } from './styles';
 
-const Content: React.FC = () => {
+const Content: React.FC<Props> = ({ children }) => {
     return (
         <Container>
-            <h1>Content</h1>
+            { children }
         </Container>
     );
 }
